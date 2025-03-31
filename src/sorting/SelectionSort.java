@@ -1,5 +1,7 @@
 package sorting;
 
+import other.AlgoUtil;
+
 /**
  * 排序算法
  * 算法思想：每次从未排序区域选出最小值，放入已排序区域末尾
@@ -11,17 +13,7 @@ package sorting;
 public class SelectionSort {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{3, 2, 1, 4, 5, 2};
-        printArr(arr);
-        sort(arr);
-        printArr(arr);
-    }
-
-    private static void printArr(int[] arr) {
-        for (int j : arr) {
-            System.out.print(j + " ");
-        }
-        System.out.println();
+        AlgoUtil.sortedChecker(SelectionSort::sort);
     }
 
     public static void sort(int[] arr) {
@@ -36,13 +28,7 @@ public class SelectionSort {
                     min = j;
                 }
             }
-            swap(arr, i, min);
+            AlgoUtil.swap(arr, i, min);
         }
-    }
-
-    public static void swap(int[] arr, int i, int j) {
-        int t = arr[i];
-        arr[i] = arr[j];
-        arr[j] = t;
     }
 }

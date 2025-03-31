@@ -1,5 +1,7 @@
 package sorting;
 
+import other.AlgoUtil;
+
 /**
  * 插入排序
  * 核心思想：每次从未排序区域中取出一个数插入到已排序区域
@@ -11,17 +13,7 @@ package sorting;
 public class InsertionSort {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{3, 2, 1, 4, 5, 2};
-        printArr(arr);
-        sort(arr);
-        printArr(arr);
-    }
-
-    private static void printArr(int[] arr) {
-        for (int j : arr) {
-            System.out.print(j + " ");
-        }
-        System.out.println();
+        AlgoUtil.sortedChecker(InsertionSort::sort);
     }
 
     public static void sort(int[] arr) {
@@ -32,15 +24,9 @@ public class InsertionSort {
         for (int i = 1; i < N; i++) {
             for (int j = i; j > 0; j--) {
                 if (arr[j] < arr[j - 1]) {
-                    swap(arr, j, j - 1);
+                    AlgoUtil.swap(arr, j, j - 1);
                 }
             }
         }
-    }
-
-    public static void swap(int[] arr, int i, int j) {
-        int t = arr[i];
-        arr[i] = arr[j];
-        arr[j] = t;
     }
 }

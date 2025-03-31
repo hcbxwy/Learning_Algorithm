@@ -1,5 +1,7 @@
 package sorting;
 
+import other.AlgoUtil;
+
 /**
  * 冒泡排序
  * 核心思想：两两比较，遇到后面比前面大就交换，这样每轮结束都会排好一个最大值
@@ -11,17 +13,7 @@ package sorting;
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{3, 2, 1, 4, 5, 2};
-        printArr(arr);
-        sort(arr);
-        printArr(arr);
-    }
-
-    private static void printArr(int[] arr) {
-        for (int j : arr) {
-            System.out.print(j + " ");
-        }
-        System.out.println();
+        AlgoUtil.sortedChecker(BubbleSort::sort);
     }
 
     public static void sort(int[] arr) {
@@ -32,15 +24,9 @@ public class BubbleSort {
         for (int i = 0; i < N; i++) {
             for (int j = 1; j < N - i; j++) {
                 if (arr[j] < arr[j - 1]) {
-                    swap(arr, j, j - 1);
+                    AlgoUtil.swap(arr, j, j - 1);
                 }
             }
         }
-    }
-
-    public static void swap(int[] arr, int i, int j) {
-        int t = arr[i];
-        arr[i] = arr[j];
-        arr[j] = t;
     }
 }
