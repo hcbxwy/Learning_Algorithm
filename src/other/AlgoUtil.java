@@ -47,7 +47,7 @@ public class AlgoUtil {
     public static void printArr(String msg, int[] arr) {
         StringBuilder sb = new StringBuilder(msg);
         for (int a : arr) {
-            sb.append(a).append(" ");
+            sb.append(a).append(",");
         }
         System.out.println(sb);
     }
