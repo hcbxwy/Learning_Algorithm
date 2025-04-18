@@ -36,7 +36,7 @@ public class LinkedList_04 {
         if (first == null) {
             return null;
         }
-        int ans = first.value;
+        int ans = first.val;
         first = first.next;
         return ans;
     }

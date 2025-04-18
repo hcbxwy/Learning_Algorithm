@@ -18,7 +18,7 @@ public class LinkedList_06 {
         n3.next = n4;
         n4.next = new ListNode(5);
         head = reverseKGroup(head, 2);
-        System.out.println(head.value);
+        System.out.println(head.val);
     }
 
     /**
