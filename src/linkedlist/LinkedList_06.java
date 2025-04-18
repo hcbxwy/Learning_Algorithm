@@ -4,7 +4,7 @@ package linkedlist;
  * 单链表中k个节点小组内逆序，不够k个节点时不处理
  * 如：链表 1➡2➡3➡4➡5，k=2
  * 逆序后：2➡1➡4➡3➡5
- * 测试链接：<a href="https://leetcode.com/problems/reverse-nodes-in-k-group/">...</a>
+ * <a href="https://leetcode.com/problems/reverse-nodes-in-k-group/">测试链接</a>
  */
 public class LinkedList_06 {
 
