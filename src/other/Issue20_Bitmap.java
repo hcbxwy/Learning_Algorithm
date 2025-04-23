@@ -1,4 +1,4 @@
-package bitmap;
+package other;
 
 /**
  * 实现一个位图
