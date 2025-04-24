@@ -23,7 +23,23 @@ public class Issue21_24_BitAddMinusMultiDiv {
         return sum;
     }
 
+    // 一个数取反 -num = ~num + 1
+    private static int negNum(int num) {
+        return add(~num, 1);
+    }
+
+    /**
+     * 减法
+     * a - b = a + (-b)
+     */
+    public static int minus(int a, int b) {
+        return add(a, negNum(b));
+    }
+
     public static void main(String[] args) {
-        System.out.println(add(100, 99));
+        // 测试加法
+        // System.out.println(add(100, 99));
+        // 测试减法
+        System.out.println(minus(10, -10));
     }
 }
