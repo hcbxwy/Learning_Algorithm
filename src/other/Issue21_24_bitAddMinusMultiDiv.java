@@ -4,7 +4,7 @@ package other;
  * 使用位运算实现加减乘除
  * <a href="https://leetcode.com/problems/divide-two-integers/">除法测试链接</a>
  */
-public class Issue21_24_BitAddMinusMultiDiv {
+public class Issue21_24_bitAddMinusMultiDiv {
 
     /**
      * 加法

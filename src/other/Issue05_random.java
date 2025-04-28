@@ -6,7 +6,7 @@ package other;
  * 练习题：
  * 1.给定一个等概率返回[10,25]的f()函数,如何基于f函数实现g函数,要求等概率返回[15,20]。
  */
-public class Random_01 {
+public class Issue05_random {
 
     public static void main(String[] args) {
         int times = 10000;

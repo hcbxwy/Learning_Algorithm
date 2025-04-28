@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 双链表反转
  */
-public class LinkedList_02 {
+public class Issue13_reverseDoubleLinkedList {
 
     public static void main(String[] args) {
         DoubleListNode head = new DoubleListNode(1);

@@ -5,7 +5,7 @@ import other.AlgoUtil;
 /**
  * 给定一个无序数组，返回一个局部最小值
  */
-public class BS_03 {
+public class Issue10_findScopeMinNum {
 
     public static void main(String[] args) {
         int maxLen = 10;

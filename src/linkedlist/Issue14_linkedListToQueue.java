@@ -4,13 +4,13 @@ package linkedlist;
  * 用单链表实现队列
  * 队列即先进先出 FIFO
  */
-public class LinkedList_03 {
+public class Issue14_linkedListToQueue {
 
     ListNode first;
     ListNode last;
 
     public static void main(String[] args) {
-        LinkedList_03 list = new LinkedList_03();
+        Issue14_linkedListToQueue list = new Issue14_linkedListToQueue();
         list.add(1);
         list.add(2);
         list.add(3);

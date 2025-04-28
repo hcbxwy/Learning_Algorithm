@@ -10,10 +10,10 @@ import other.AlgoUtil;
  * ……
  * 第N轮，只剩0位置，整个数组有序
  */
-public class BubbleSort {
+public class Issue03_bubbleSort {
 
     public static void main(String[] args) {
-        AlgoUtil.sortedChecker(BubbleSort::sort);
+        AlgoUtil.sortedChecker(Issue03_bubbleSort::sort);
     }
 
     public static void sort(int[] arr) {

@@ -9,7 +9,7 @@ package linkedlist;
  * 解释 634+352=986
  * <a href="https://leetcode.com/problems/add-two-numbers/description/">测试链接</a>
  */
-public class LinkedList_07 {
+public class Issue18_addTwoLinkedLists {
 
     public static void main(String[] args) {
         ListNode head1 = new ListNode(4);

@@ -4,7 +4,7 @@ package other;
  * 实现一个位图
  * 具备add、remove、contains方法
  */
-public class Issue20_Bitmap {
+public class Issue20_bitmap {
 
     public static void main(String[] args) {
         Bitmap bitmap = new Bitmap(10);

@@ -6,7 +6,7 @@ package linkedlist;
  * 逆序后：2➡1➡4➡3➡5
  * <a href="https://leetcode.com/problems/reverse-nodes-in-k-group/">测试链接</a>
  */
-public class LinkedList_06 {
+public class Issue17_reverseNodesInKGroup {
 
     public static void main(String[] args) {
         ListNode head = new ListNode(1);

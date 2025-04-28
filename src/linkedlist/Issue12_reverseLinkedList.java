@@ -6,7 +6,7 @@ package linkedlist;
  * 反转：null<-1<-2<-3
  * <a href="https://leetcode.cn/problems/reverse-linked-list/description/">测试网址</a>
  */
-public class LinkedList_01 {
+public class Issue12_reverseLinkedList {
 
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {

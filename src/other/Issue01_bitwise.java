@@ -11,7 +11,7 @@ package other;
  * 无符号右移>>: 右移1就是除以2，右移2就是除以4……
  * 带符号右移>>>
  */
-public class Bitwise {
+public class Issue01_bitwise {
 
     public static void main(String[] args) {
         printIntToBinary(121313);

@@ -10,10 +10,10 @@ import other.AlgoUtil;
  * ……
  * 第N-1轮，只剩自己，不需要任何操作了
  */
-public class SelectionSort {
+public class Issue02_selectionSort {
 
     public static void main(String[] args) {
-        AlgoUtil.sortedChecker(SelectionSort::sort);
+        AlgoUtil.sortedChecker(Issue02_selectionSort::sort);
     }
 
     public static void sort(int[] arr) {

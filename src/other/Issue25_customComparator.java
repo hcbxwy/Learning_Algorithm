@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 自定义比较器
  */
-public class Issue25_CustomComparator {
+public class Issue25_customComparator {
 
     public static void main(String[] args) {
         List<People> list = new ArrayList<>();

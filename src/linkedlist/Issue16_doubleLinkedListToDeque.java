@@ -9,14 +9,14 @@ package linkedlist;
  * 判空：isEmpty
  * 获取队头/队尾元素: peekFirst, peekLast
  */
-public class LinkedList_05 {
+public class Issue16_doubleLinkedListToDeque {
 
     DoubleListNode first;
     DoubleListNode last;
 
 
     public static void main(String[] args) {
-        LinkedList_05 list = new LinkedList_05();
+        Issue16_doubleLinkedListToDeque list = new Issue16_doubleLinkedListToDeque();
         list.addFirst(1);
         list.addFirst(2);
         list.addLast(3);

@@ -10,10 +10,10 @@ import other.AlgoUtil;
  * ……
  * 第N轮：从N-1开始，从右到左和0~N-2比较，如果小就交换，并且往前移，最终0~N-1有序
  */
-public class InsertionSort {
+public class Issue04_insertionSort {
 
     public static void main(String[] args) {
-        AlgoUtil.sortedChecker(InsertionSort::sort);
+        AlgoUtil.sortedChecker(Issue04_insertionSort::sort);
     }
 
     public static void sort(int[] arr) {

@@ -4,12 +4,12 @@ package linkedlist;
  * 用单链表实现栈
  * 栈即后进先出
  */
-public class LinkedList_04 {
+public class Issue15_linkedListToStack {
 
     ListNode first;
 
     public static void main(String[] args) {
-        LinkedList_04 list = new LinkedList_04();
+        Issue15_linkedListToStack list = new Issue15_linkedListToStack();
         list.add(1);
         list.add(2);
         list.add(3);

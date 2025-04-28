@@ -3,7 +3,7 @@ package other;
 /**
  * 基于0和1不等概率随机函数实现0和1等概率随机效果
  */
-public class Random_02 {
+public class Issue06_random_01 {
 
     public static void main(String[] args) {
         int times = 10000;
