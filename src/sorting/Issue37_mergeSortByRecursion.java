@@ -29,7 +29,7 @@ public class Issue37_mergeSortByRecursion {
             return;
         }
         // 取中间位置 (l+r)/2
-        int m = l + ((r - l) >> 2);
+        int m = l + ((r - l) >> 1);
         // 确保m左边有序
         process(arr, l, m);
         // 确保m右边有序

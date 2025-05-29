@@ -32,11 +32,22 @@ public class AlgoUtil {
     }
 
     /**
+     * 复制数组
+     * @param arr 旧数组
+     * @return 新数组
+     */
+    public static int[] copy(int[] arr) {
+        int[] temp = new int[arr.length];
+        System.arraycopy(arr, 0, temp, 0, arr.length);
+        return temp;
+    }
+
+    /**
      * 打印数组，数组元素之间用空格分隔
      */
     public static void printArr(int[] arr) {
         for (int n : arr) {
-            System.out.print(n + " ");
+            System.out.print(n + ",");
         }
         System.out.println();
     }
