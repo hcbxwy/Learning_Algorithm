@@ -4,7 +4,7 @@ package sorting;
  * 求数组中num的右边有多少个数*2都比num小
  * <a href="https://leetcode.cn/problems/reverse-pairs/">测试链接</a>
  */
-public class Issue52_reversePairs2 {
+public class Issue53_reversePairs2 {
 
     public static void main(String[] args) {
         int[] arr = new int[]{233, 2000000001, 234, 2000000006, 235, 2000000003, 236, 2000000007, 237, 2000000002, 2000000005, 233, 233, 233, 233,
