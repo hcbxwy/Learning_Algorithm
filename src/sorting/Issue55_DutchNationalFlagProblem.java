@@ -8,7 +8,7 @@ import other.AlgoUtil;
  * 1.数组中<=x的数放左边，>x的数放右边
  * 2.数组中<x的数放左边，=x的数放中间，>x的数放右边
  */
-public class Issue55_quickSort1 {
+public class Issue55_DutchNationalFlagProblem {
 
     public static void main(String[] args) {
         int[] arr = new int[]{2, 1, 6, 4, 1};
