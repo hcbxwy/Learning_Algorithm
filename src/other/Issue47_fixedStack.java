@@ -1,4 +1,4 @@
-package stack;
+package other;
 
 /**
  * 用数组实现不超过固定大小的栈
