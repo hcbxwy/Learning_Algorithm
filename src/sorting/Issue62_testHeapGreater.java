@@ -5,7 +5,7 @@ import java.util.Comparator;
 /**
  * 手写一个加强堆
  */
-public class Issue62_HeapGreater {
+public class Issue62_testHeapGreater {
 
     public static void main(String[] args) {
         Student s1 = new Student("张三", 18);
