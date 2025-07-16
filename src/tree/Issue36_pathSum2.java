@@ -1,5 +1,7 @@
 package tree;
 
+import common.BTNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,20 +12,20 @@ import java.util.List;
 public class Issue36_pathSum2 {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(2);
-        root.left = new TreeNode(1);
-        root.left.left = new TreeNode(5);
-        root.left.right = new TreeNode(6);
-        root.right = new TreeNode(4);
-        root.right.left = new TreeNode(7);
-        root.right.right = new TreeNode(2);
+        BTNode root = new BTNode(2);
+        root.left = new BTNode(1);
+        root.left.left = new BTNode(5);
+        root.left.right = new BTNode(6);
+        root.right = new BTNode(4);
+        root.right.left = new BTNode(7);
+        root.right.right = new BTNode(2);
         List<List<Integer>> lists = pathSum(root, 8);
         for (List<Integer> list : lists) {
             System.out.println(list);
         }
     }
 
-    public static List<List<Integer>> pathSum(TreeNode root, int targetSum) {
+    public static List<List<Integer>> pathSum(BTNode root, int targetSum) {
         if (root == null) {
             return new ArrayList<>();
         }
@@ -33,7 +35,7 @@ public class Issue36_pathSum2 {
         return ans;
     }
 
-    public static void process(TreeNode node, List<Integer> path, List<List<Integer>> ans, int targetSum, int preSum) {
+    public static void process(BTNode node, List<Integer> path, List<List<Integer>> ans, int targetSum, int preSum) {
         if (node.left == null && node.right == null) {
             if (preSum + node.val == targetSum) {
                 path.add(node.val);

@@ -1,6 +1,6 @@
 package sorting;
 
-import other.AlgoUtil;
+import common.AlgoUtil;
 
 /**
  * 冒泡排序

@@ -1,6 +1,6 @@
 package sorting;
 
-import other.AlgoUtil;
+import common.AlgoUtil;
 
 /**
  * 非递归方式实现归并排序

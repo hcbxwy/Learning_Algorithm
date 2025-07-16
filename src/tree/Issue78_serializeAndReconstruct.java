@@ -1,5 +1,8 @@
 package tree;
 
+import common.AlgoUtil;
+import common.BTNode;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -15,35 +18,34 @@ import java.util.Stack;
 public class Issue78_serializeAndReconstruct {
 
     public static void main(String[] args) {
-        TreeNode head = new TreeNode(1);
-        head.left = new TreeNode(2);
-        head.left.left = new TreeNode(4);
-        head.right = new TreeNode(3);
-        head.right.right = new TreeNode(5);
+        BTNode head = AlgoUtil.randomBT();
         Queue<String> preQueue = preSerialize(head);
         System.out.println("先序遍历序列化：" + Arrays.toString(preQueue.toArray()));
-        TreeNode preHead = preReconstruct(preQueue);
-        System.out.println("先序遍历反序列化：" + preHead);
+        BTNode preHead = preReconstruct(preQueue);
+        System.out.println("先序遍历反序列化");
+        AlgoUtil.printBT(preHead);
 
         Queue<String> posQueue = posSerialize(head);
         System.out.println("后序遍历序列化：" + Arrays.toString(posQueue.toArray()));
-        TreeNode posHead = posReconstruct(posQueue);
-        System.out.println("后序遍历反序列化：" + posHead);
+        BTNode posHead = posReconstruct(posQueue);
+        System.out.println("后序遍历反序列化");
+        AlgoUtil.printBT(posHead);
 
         Queue<String> levelQueue = levelSerialize(head);
         System.out.println("按层遍历序列化：" + Arrays.toString(levelQueue.toArray()));
-        TreeNode levelHead = levelReconstruct(levelQueue);
-        System.out.println("按层遍历反序列化：" + levelHead);
+        BTNode levelHead = levelReconstruct(levelQueue);
+        System.out.println("按层遍历反序列化");
+        AlgoUtil.printBT(levelHead);
     }
 
     // 先序遍历的序列化
-    public static Queue<String> preSerialize(TreeNode head) {
+    public static Queue<String> preSerialize(BTNode head) {
         Queue<String> queue = new LinkedList<>();
         preS(head, queue);
         return queue;
     }
 
-    private static void preS(TreeNode head, Queue<String> queue) {
+    private static void preS(BTNode head, Queue<String> queue) {
         if (head == null) {
             queue.add(null);
         } else {
@@ -54,31 +56,31 @@ public class Issue78_serializeAndReconstruct {
     }
 
     // 先序遍历反序列化
-    public static TreeNode preReconstruct(Queue<String> queue) {
+    public static BTNode preReconstruct(Queue<String> queue) {
         if (queue == null || queue.isEmpty()) {
             return null;
         }
         return preR(queue);
     }
 
-    private static TreeNode preR(Queue<String> queue) {
+    private static BTNode preR(Queue<String> queue) {
         String val = queue.poll();
         if (val == null) {
             return null;
         }
-        TreeNode head = new TreeNode(Integer.parseInt(val));
+        BTNode head = new BTNode(Integer.parseInt(val));
         head.left = preR(queue);
         head.right = preR(queue);
         return head;
     }
 
-    public static Queue<String> posSerialize(TreeNode head) {
+    public static Queue<String> posSerialize(BTNode head) {
         Queue<String> queue = new LinkedList<>();
         posS(head, queue);
         return queue;
     }
 
-    private static void posS(TreeNode cur, Queue<String> queue) {
+    private static void posS(BTNode cur, Queue<String> queue) {
         if (cur == null) {
             queue.add(null);
         } else {
@@ -88,7 +90,7 @@ public class Issue78_serializeAndReconstruct {
         }
     }
 
-    public static TreeNode posReconstruct(Queue<String> queue) {
+    public static BTNode posReconstruct(Queue<String> queue) {
         if (queue == null || queue.isEmpty()) {
             return null;
         }
@@ -100,25 +102,25 @@ public class Issue78_serializeAndReconstruct {
         return posR(stack);
     }
 
-    private static TreeNode posR(Stack<String> stack) {
+    private static BTNode posR(Stack<String> stack) {
         String val = stack.pop();
         if (val == null) {
             return null;
         }
         // 中右左
-        TreeNode head = new TreeNode(Integer.parseInt(val));
+        BTNode head = new BTNode(Integer.parseInt(val));
         head.right = posR(stack);
         head.left = posR(stack);
         return head;
     }
 
     // 层级遍历的序列化
-    public static Queue<String> levelSerialize(TreeNode head) {
+    public static Queue<String> levelSerialize(BTNode head) {
         Queue<String> ans = new LinkedList<>();
-        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<BTNode> queue = new LinkedList<>();
         queue.add(head);
         while (!queue.isEmpty()) {
-            TreeNode cur = queue.poll();
+            BTNode cur = queue.poll();
             if (cur == null) {
                 ans.add(null);
             } else {
@@ -130,17 +132,17 @@ public class Issue78_serializeAndReconstruct {
         return ans;
     }
 
-    public static TreeNode levelReconstruct(Queue<String> list) {
+    public static BTNode levelReconstruct(Queue<String> list) {
         if (list == null || list.isEmpty()) {
             return null;
         }
-        TreeNode head = generateNode(list.poll());
-        Queue<TreeNode> queue = new LinkedList<>();
+        BTNode head = generateNode(list.poll());
+        Queue<BTNode> queue = new LinkedList<>();
         if (head != null) {
             queue.add(head);
         }
         while (!queue.isEmpty()) {
-            TreeNode cur = queue.poll();
+            BTNode cur = queue.poll();
             cur.left = generateNode(list.poll());
             cur.right = generateNode(list.poll());
             if (cur.left != null) {
@@ -153,8 +155,8 @@ public class Issue78_serializeAndReconstruct {
         return head;
     }
 
-    private static TreeNode generateNode(String val) {
-        return val == null ? null : new TreeNode(Integer.parseInt(val));
+    private static BTNode generateNode(String val) {
+        return val == null ? null : new BTNode(Integer.parseInt(val));
     }
 
 }

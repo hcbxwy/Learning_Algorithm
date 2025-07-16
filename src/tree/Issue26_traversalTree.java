@@ -1,18 +1,20 @@
 package tree;
 
+import common.BTNode;
+
 /**
  * 二叉树的前中后序遍历打印
  */
 public class Issue26_traversalTree {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(5);
-        root.right.left = new TreeNode(6);
-        root.right.right = new TreeNode(7);
+        BTNode root = new BTNode(1);
+        root.left = new BTNode(2);
+        root.right = new BTNode(3);
+        root.left.left = new BTNode(4);
+        root.left.right = new BTNode(5);
+        root.right.left = new BTNode(6);
+        root.right.right = new BTNode(7);
         // 前序遍历，期望结果：1 2 4 5 3 6 7
         preorder(root);
         System.out.println();
@@ -23,7 +25,7 @@ public class Issue26_traversalTree {
         postorder(root);
     }
 
-    public static void preorder(TreeNode node) {
+    public static void preorder(BTNode node) {
         if (node == null) {
             return;
         }
@@ -32,7 +34,7 @@ public class Issue26_traversalTree {
         preorder(node.right);
     }
 
-    public static void inorder(TreeNode node) {
+    public static void inorder(BTNode node) {
         if (node == null) {
             return;
         }
@@ -41,7 +43,7 @@ public class Issue26_traversalTree {
         inorder(node.right);
     }
 
-    public static void postorder(TreeNode node) {
+    public static void postorder(BTNode node) {
         if (node == null) {
             return;
         }

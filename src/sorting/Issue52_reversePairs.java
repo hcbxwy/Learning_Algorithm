@@ -1,6 +1,6 @@
 package sorting;
 
-import other.AlgoUtil;
+import common.AlgoUtil;
 
 /**
  * 求数组有多少个逆序对

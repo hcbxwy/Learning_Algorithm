@@ -1,5 +1,7 @@
 package tree;
 
+import common.BTNode;
+
 /**
  * 判断一棵树是否平衡二叉树
  * 平衡的定义：任意节点的左右子节点高度差不超过1
@@ -7,11 +9,11 @@ package tree;
  */
 public class Issue33_balancedBinaryTree {
 
-    public static boolean isBalanced(TreeNode root) {
+    public static boolean isBalanced(BTNode root) {
         return process(root).isBalanced;
     }
 
-    private static NodeInfo process(TreeNode node) {
+    private static NodeInfo process(BTNode node) {
         if (node == null) {
             return new NodeInfo(0, true);
         }

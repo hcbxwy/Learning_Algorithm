@@ -1,6 +1,6 @@
 package binarysearch;
 
-import other.AlgoUtil;
+import common.AlgoUtil;
 
 import java.util.Arrays;
 

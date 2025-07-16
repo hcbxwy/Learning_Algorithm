@@ -1,5 +1,7 @@
 package tree;
 
+import common.BTNode;
+
 /**
  * 根据先序数组和中序数组重建树
  * <a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal">测试链接</a>
@@ -12,15 +14,15 @@ public class Issue31_buildTreeFromPreorderAndInorder {
         System.out.println(buildTree(preorder, inorder));
     }
 
-    public static TreeNode buildTree(int[] pre, int[] in) {
+    public static BTNode buildTree(int[] pre, int[] in) {
         return f(pre, 0, in, 0, in.length);
     }
 
-    public static TreeNode f(int[] pre, int l1, int[] in, int l2, int r2) {
+    public static BTNode f(int[] pre, int l1, int[] in, int l2, int r2) {
         if (l1 > pre.length - 1 || l2 > r2) {
             return null;
         }
-        TreeNode head = new TreeNode(pre[l1]);
+        BTNode head = new BTNode(pre[l1]);
         int find = l2;
         while (in[find] != pre[l1]) {
             find++;

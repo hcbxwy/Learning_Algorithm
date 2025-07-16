@@ -1,6 +1,6 @@
 package binarysearch;
 
-import other.AlgoUtil;
+import common.AlgoUtil;
 
 /**
  * 给定一个无序数组，返回一个局部最小值

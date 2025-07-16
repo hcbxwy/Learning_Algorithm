@@ -1,4 +1,4 @@
-package other;
+package common;
 
 import java.util.Arrays;
 import java.util.function.Consumer;
@@ -29,6 +29,51 @@ public class AlgoUtil {
             arr[i] = (int) (Math.random() * maxVal);
         }
         return arr;
+    }
+
+    /**
+     * 生成随机二叉树
+     *
+     * @param maxLevel 最大层数
+     * @param maxVal 节点最大值
+     * @return 二叉树头节点
+     */
+    public static BTNode randomBT(int maxLevel, int maxVal) {
+        return generateBT(1, maxLevel, maxVal);
+    }
+
+    /**
+     * 生成随机二叉树
+     * 默认5层，节点最大值10
+     *
+     * @return 二叉树头节点
+     */
+    public static BTNode randomBT() {
+        return generateBT(1, 3, 10);
+    }
+
+    /**
+     * 打印二叉树
+     *
+     * @param head 头结点
+     */
+    public static void printBT(BTNode head) {
+        BinaryTreePrinter.print(head);
+    }
+
+    private static BTNode generateBT(int curLevel, int maxLevel, int maxVal) {
+        // 有30%的概率产生空节点，当前层数大于最大层数时结束
+        if (Math.random() < 0.3 || curLevel > maxLevel) {
+            return null;
+        }
+        BTNode head = new BTNode(randomInt(maxVal));
+        head.left = generateBT(curLevel + 1, maxLevel, maxVal);
+        head.right = generateBT(curLevel + 1, maxLevel, maxVal);
+        return head;
+    }
+
+    private static int randomInt(int maxVal) {
+        return (int) (Math.random() * maxVal);
     }
 
     /**

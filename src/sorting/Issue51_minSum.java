@@ -1,6 +1,6 @@
 package sorting;
 
-import other.AlgoUtil;
+import common.AlgoUtil;
 
 /**
  * 求数组的最小和，要求时间复杂度O(nlogn)

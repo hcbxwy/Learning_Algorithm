@@ -1,6 +1,6 @@
 package sorting;
 
-import other.AlgoUtil;
+import common.AlgoUtil;
 
 /**
  * 荷兰国旗问题

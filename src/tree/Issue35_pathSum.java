@@ -1,5 +1,7 @@
 package tree;
 
+import common.BTNode;
+
 /**
  * 判断二叉树是否存在达标路径和
  * 路径和是指从根节点出发到达叶节点所经过的节点之和
@@ -8,7 +10,7 @@ package tree;
  */
 public class Issue35_pathSum {
 
-    public static boolean hasPathSum(TreeNode root, int targetSum) {
+    public static boolean hasPathSum(BTNode root, int targetSum) {
         if (root == null) {
             return false;
         }
@@ -16,7 +18,7 @@ public class Issue35_pathSum {
     }
 
     // 方案1：累减
-    public static boolean process(TreeNode node, int rest) {
+    public static boolean process(BTNode node, int rest) {
         // 叶子节点
         if (node.left == null && node.right == null) {
             return node.val == rest;
@@ -28,7 +30,7 @@ public class Issue35_pathSum {
     }
 
     // 方案2：累加
-    public static boolean process2(TreeNode node, int sum, int targetSum) {
+    public static boolean process2(BTNode node, int sum, int targetSum) {
         // 叶子节点
         if (node.left == null && node.right == null) {
             return sum + node.val == targetSum;

@@ -1,5 +1,7 @@
 package tree;
 
+import common.BTNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -12,23 +14,23 @@ import java.util.Queue;
 public class Issue77_levelTraversal {
 
     public static void main(String[] args) {
-        TreeNode head = new TreeNode(1);
-        head.left = new TreeNode(2);
-        head.left.left = new TreeNode(4);
-        head.right = new TreeNode(3);
-        head.right.right = new TreeNode(5);
+        BTNode head = new BTNode(1);
+        head.left = new BTNode(2);
+        head.left.left = new BTNode(4);
+        head.right = new BTNode(3);
+        head.right.right = new BTNode(5);
 
         levelTraversal(head);
     }
 
-    public static void levelTraversal(TreeNode head) {
+    public static void levelTraversal(BTNode head) {
         System.out.print("按层遍历：");
         if (head == null) {
             return;
         }
-        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<BTNode> queue = new LinkedList<>();
         queue.add(head);
-        TreeNode cur = null;
+        BTNode cur = null;
         while (!queue.isEmpty()) {
             cur = queue.poll();
             System.out.print(cur.val + " ");

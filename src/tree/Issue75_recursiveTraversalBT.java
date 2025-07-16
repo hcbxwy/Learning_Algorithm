@@ -1,5 +1,7 @@
 package tree;
 
+import common.BTNode;
+
 /**
  * 递归遍历二叉树：前中后序、递归序
  *
@@ -9,9 +11,9 @@ package tree;
 public class Issue75_recursiveTraversalBT {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
+        BTNode root = new BTNode(1);
+        root.left = new BTNode(2);
+        root.right = new BTNode(3);
         System.out.print("前序遍历：");
         preOrder(root);
 
@@ -25,7 +27,7 @@ public class Issue75_recursiveTraversalBT {
     }
 
     // 前序遍历
-    public static void preOrder(TreeNode root) {
+    public static void preOrder(BTNode root) {
         if (root == null) {
             return;
         }
@@ -35,7 +37,7 @@ public class Issue75_recursiveTraversalBT {
     }
 
     // 中序遍历
-    public static void inOrder(TreeNode root) {
+    public static void inOrder(BTNode root) {
         if (root == null) {
             return;
         }
@@ -45,7 +47,7 @@ public class Issue75_recursiveTraversalBT {
     }
 
     // 后序遍历
-    public static void posOrder(TreeNode root) {
+    public static void posOrder(BTNode root) {
         if (root == null) {
             return;
         }
@@ -55,7 +57,7 @@ public class Issue75_recursiveTraversalBT {
     }
 
     // 递归序：每个节点都被访问3次
-    public static void f(TreeNode root) {
+    public static void f(BTNode root) {
         if (root == null) {
             return;
         }
