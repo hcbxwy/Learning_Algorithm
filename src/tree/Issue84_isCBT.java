@@ -18,16 +18,7 @@ import java.util.Queue;
 public class Issue84_isCBT {
 
     public static void main(String[] args) {
-        // BTNode head = AlgoUtil.randomBT();
-        // System.out.println(isCBT1(head));
-        // AlgoUtil.printBT(head);
-        for (int i = 0; i < 10000; i++) {
-            BTNode head = AlgoUtil.randomBT();
-            if (isCBT1(head) != isCBT2(head)) {
-                System.out.println("Oops");
-            }
-        }
-        System.out.println("finished");
+        AlgoUtil.btChecker(Issue84_isCBT::isCBT1, Issue84_isCBT::isCBT2);
     }
 
     // 第一种方案：按层遍历，只要遇到左右不双全的节点，那么该节点后面的节点都是叶节点

@@ -2,6 +2,7 @@ package common;
 
 import java.util.Arrays;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 /**
  * 算法相关的工具类
@@ -145,6 +146,27 @@ public class AlgoUtil {
             }
         }
         System.out.println("Wow，排序算法正确！！！");
+    }
+
+    /**
+     * 二叉树对数器
+     *
+     * @param f1 需要测试的方法
+     * @param f2 用于对数的方法
+     */
+    public static void btChecker(Function<BTNode, Boolean> f1, Function<BTNode, Boolean> f2) {
+        for (int i = 0; i < 100000; i++) {
+            BTNode head = randomBT();
+            Boolean f1Ans = f1.apply(head);
+            Boolean f2Ans = f2.apply(head);
+            if (f1Ans != f2Ans) {
+                System.out.println("Oops! 未通过测试！！！");
+                System.out.println("f1: " + f1Ans + ", f2: " + f2Ans);
+                printBT(head);
+                break;
+            }
+        }
+        System.out.println("Perfect! 通过测试！");
     }
 
     /**
