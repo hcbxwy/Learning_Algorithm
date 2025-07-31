@@ -58,7 +58,7 @@ public class Issue84_isCBT {
         return process(head).isCBT;
     }
 
-    public static Info process(BTNode x) {
+    private static Info process(BTNode x) {
         if (x == null) {
             return new Info(0, true, true);
         }
@@ -86,7 +86,7 @@ public class Issue84_isCBT {
         return new Info(height, isCBT, isFull);
     }
 
-    public static class Info {
+    private static class Info {
         int height;
         boolean isCBT;
         boolean isFull;

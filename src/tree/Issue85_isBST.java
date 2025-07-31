@@ -19,7 +19,7 @@ public class Issue85_isBST {
         AlgoUtil.btChecker(Issue85_isBST::isBST, Issue85_isBST::isBST2);
     }
 
-    public static class Info {
+    private static class Info {
         int min;
         int max;
         boolean isBST;
@@ -39,7 +39,7 @@ public class Issue85_isBST {
         return process(head).isBST;
     }
 
-    public static Info process(BTNode x) {
+    private static Info process(BTNode x) {
         if (x == null) {
             return null;
         }
@@ -59,10 +59,7 @@ public class Issue85_isBST {
         if (rightInfo != null) {
             max = Math.max(rightInfo.max, max);
         }
-        boolean isBST = true;
-        if (leftInfo != null && !leftInfo.isBST) {
-            isBST = false;
-        }
+        boolean isBST = leftInfo == null || leftInfo.isBST;
         if (rightInfo != null && !rightInfo.isBST) {
             isBST = false;
         }

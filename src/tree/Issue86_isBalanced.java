@@ -21,7 +21,7 @@ public class Issue86_isBalanced {
         return process(head).isBalanced;
     }
 
-    public static class Info {
+    private static class Info {
         int height;
         boolean isBalanced;
 
@@ -31,7 +31,7 @@ public class Issue86_isBalanced {
         }
     }
 
-    public static Info process(BTNode x) {
+    private static Info process(BTNode x) {
         if (x == null) {
             return new Info(0, true);
         }
