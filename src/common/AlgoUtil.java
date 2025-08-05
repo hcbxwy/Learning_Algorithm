@@ -154,11 +154,32 @@ public class AlgoUtil {
      * @param f1 需要测试的方法
      * @param f2 用于对数的方法
      */
-    public static void btChecker(Function<BTNode, Boolean> f1, Function<BTNode, Boolean> f2) {
+    public static void btBooleanChecker(Function<BTNode, Boolean> f1, Function<BTNode, Boolean> f2) {
         for (int i = 0; i < 100000; i++) {
             BTNode head = randomBT();
             Boolean f1Ans = f1.apply(head);
             Boolean f2Ans = f2.apply(head);
+            if (f1Ans != f2Ans) {
+                System.out.println("Oops! 未通过测试！！！");
+                System.out.println("f1: " + f1Ans + ", f2: " + f2Ans);
+                printBT(head);
+                break;
+            }
+        }
+        System.out.println("Perfect! 通过测试！");
+    }
+
+    /**
+     * 二叉树对数器
+     *
+     * @param f1 需要测试的方法
+     * @param f2 用于对数的方法
+     */
+    public static void btNodeChecker(Function<BTNode, BTNode> f1, Function<BTNode, BTNode> f2) {
+        for (int i = 0; i < 100000; i++) {
+            BTNode head = randomBT();
+            BTNode f1Ans = f1.apply(head);
+            BTNode f2Ans = f2.apply(head);
             if (f1Ans != f2Ans) {
                 System.out.println("Oops! 未通过测试！！！");
                 System.out.println("f1: " + f1Ans + ", f2: " + f2Ans);

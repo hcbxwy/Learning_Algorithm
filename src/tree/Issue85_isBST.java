@@ -16,7 +16,7 @@ import java.util.List;
 public class Issue85_isBST {
 
     public static void main(String[] args) {
-        AlgoUtil.btChecker(Issue85_isBST::isBST, Issue85_isBST::isBST2);
+        AlgoUtil.btBooleanChecker(Issue85_isBST::isBST, Issue85_isBST::isBST2);
     }
 
     private static class Info {

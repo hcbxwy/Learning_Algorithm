@@ -13,7 +13,7 @@ import common.BTNode;
 public class Issue86_isBalanced {
 
     public static void main(String[] args) {
-        AlgoUtil.btChecker(Issue86_isBalanced::isBalanced1, Issue86_isBalanced::isBalanced2);
+        AlgoUtil.btBooleanChecker(Issue86_isBalanced::isBalanced1, Issue86_isBalanced::isBalanced2);
     }
 
     // 方案1：用递归套路实现

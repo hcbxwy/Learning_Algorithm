@@ -18,7 +18,7 @@ import java.util.Queue;
 public class Issue84_isCBT {
 
     public static void main(String[] args) {
-        AlgoUtil.btChecker(Issue84_isCBT::isCBT1, Issue84_isCBT::isCBT2);
+        AlgoUtil.btBooleanChecker(Issue84_isCBT::isCBT1, Issue84_isCBT::isCBT2);
     }
 
     // 第一种方案：按层遍历，只要遇到左右不双全的节点，那么该节点后面的节点都是叶节点

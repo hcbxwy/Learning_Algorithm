@@ -16,7 +16,7 @@ public class Issue87_isFull {
         // BTNode head = AlgoUtil.randomBT();
         // System.out.println(isFull1(head));
         // AlgoUtil.printBT(head);
-        AlgoUtil.btChecker(Issue87_isFull::isFull1, Issue87_isFull::isFull2);
+        AlgoUtil.btBooleanChecker(Issue87_isFull::isFull1, Issue87_isFull::isFull2);
     }
 
     // 方法一：整树高度h，节点数n，满足 2^h-1=n
