@@ -28,7 +28,7 @@ public class Issue97_UnionFindOfMap {
     }
 
 
-    static class UnionFind<V> {
+    private static class UnionFind<V> {
         HashMap<V, V> parentMap;
         HashMap<V, Integer> sizeMap;
 
