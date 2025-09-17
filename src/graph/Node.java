@@ -1,5 +1,6 @@
 package graph;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,4 +15,10 @@ class Node {
     int out;
     List<Node> nexts;
     List<Edge> edges;
+
+    Node(int value) {
+        val = value;
+        nexts = new ArrayList<>();
+        edges = new ArrayList<>();
+    }
 }
