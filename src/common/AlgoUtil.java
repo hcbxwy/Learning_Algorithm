@@ -92,9 +92,19 @@ public class AlgoUtil {
      * 打印数组，数组元素之间用空格分隔
      */
     public static void printArr(int[] arr) {
-        for (int n : arr) {
-            System.out.print(n + ",");
+        if (arr == null) {
+            System.out.println("null");
+            return;
         }
+        System.out.print("[");
+        for (int i = 0; i < arr.length; i++) {
+            if (i == arr.length - 1) {
+                System.out.print(arr[i]);
+            } else {
+                System.out.print(arr[i] + ",");
+            }
+        }
+        System.out.print("]");
         System.out.println();
     }
 
@@ -205,5 +215,27 @@ public class AlgoUtil {
             max = val;
         }
         return false;
+    }
+
+    /**
+     * 判断两个数组是否相等
+     */
+    public static boolean isEqual(int[] arr1, int[] arr2) {
+        if (arr1 == null && arr2 == null) {
+            return true;
+        } else if (arr1 == null) {
+            return false;
+        } else if (arr2 == null) {
+            return false;
+        }
+        if (arr1.length != arr2.length) {
+            return false;
+        }
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i] != arr2[i]) {
+                return false;
+            }
+        }
+        return true;
     }
 }
